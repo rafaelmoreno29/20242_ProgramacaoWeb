@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { FeatureComponent } from './feature/feature.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule } from '@angular/forms';
+import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     FeatureComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CalcularJurosSimplesComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
