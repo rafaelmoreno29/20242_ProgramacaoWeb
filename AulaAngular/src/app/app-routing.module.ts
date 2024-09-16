@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { FeatureComponent } from './feature/feature.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
+import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'feature', component: FeatureComponent },
   { path: 'calcular-juros', component: CalcularJurosSimplesComponent },
+  { path: 'diretivas', component: ExemploDiretivaComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

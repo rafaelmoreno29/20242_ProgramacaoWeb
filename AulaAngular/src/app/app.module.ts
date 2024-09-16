@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
+import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular
     AboutComponent,
     NotFoundComponent,
     CalcularJurosSimplesComponent,
+    ExemploDiretivaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
