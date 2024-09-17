@@ -17,11 +17,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let cliente of listClientes">
+        <tr
+          *ngFor="let cliente of listClientes"
+          [ngClass]="{
+            negrito: cliente.cidade.toLowerCase() == cidade.toLowerCase()
+          }"
+        >
           <td>{{ cliente.nome }}</td>
           <td
             [ngStyle]="{
-              'background-color': cliente.cidade == cidade ? 'yellow' : 'white'
+              'background-color':
+                cliente.cidade.toLowerCase() == cidade.toLowerCase()
+                  ? 'yellow'
+                  : 'white'
             }"
           >
             {{ cliente.cidade }}
