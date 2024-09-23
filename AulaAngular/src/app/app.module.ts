@@ -11,6 +11,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FormsModule } from '@angular/forms';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
 import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
+import { TarefaComponent } from './tarefa/tarefa.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
+import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.co
     NotFoundComponent,
     CalcularJurosSimplesComponent,
     ExemploDiretivaComponent,
+    TarefaComponent,
+    ClienteComponent,
+    ListaClienteComponent,
+    ListaCompraClienteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
