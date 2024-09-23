@@ -7,6 +7,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
 import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
+import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,6 +19,14 @@ const routes: Routes = [
   { path: 'calcular-juros', component: CalcularJurosSimplesComponent },
   { path: 'diretivas', component: ExemploDiretivaComponent },
   { path: 'tarefa', component: TarefaComponent },
+  {
+    path: 'cliente',
+    component: ClienteComponent,
+    children: [
+      { path: 'lista-cliente', component: ListaClienteComponent },
+      { path: 'lista-compra', component: ListaCompraClienteComponent },
+    ],
+  },
 
   { path: '**', component: NotFoundComponent },
 ];
