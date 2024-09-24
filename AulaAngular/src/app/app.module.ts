@@ -15,6 +15,7 @@ import { TarefaComponent } from './tarefa/tarefa.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
+import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/list
     ClienteComponent,
     ListaClienteComponent,
     ListaCompraClienteComponent,
+    EditarClienteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],

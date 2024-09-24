@@ -10,6 +10,7 @@ import { TarefaComponent } from './tarefa/tarefa.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
+import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,6 +26,7 @@ const routes: Routes = [
     children: [
       { path: 'lista-cliente', component: ListaClienteComponent },
       { path: 'lista-compra', component: ListaCompraClienteComponent },
+      { path: 'editar-cliente/:id', component: EditarClienteComponent },
     ],
   },
 
