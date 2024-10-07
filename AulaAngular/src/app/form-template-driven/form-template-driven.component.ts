@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-template-driven',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class FormTemplateDrivenComponent {
   cliente: any = {};
+
+  salvar(form: NgForm) {
+    if (form.valid) {
+      console.log(this.cliente);
+    }
+  }
 }

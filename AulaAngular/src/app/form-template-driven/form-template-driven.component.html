@@ -1,4 +1,4 @@
-<form>
+<form #form="ngForm" (ngSubmit)="salvar(form)">
   <div class="form-group">
     <label for="name">Nome</label>
     <input
@@ -9,6 +9,14 @@
       name="nome"
       required
     />
+    <div
+      *ngIf="form.submitted && form.controls['nome'].errors"
+      class="invalid-feedback"
+    >
+      <div *ngIf="form.controls['nome'].errors['required']">
+        Nome é obrigatório
+      </div>
+    </div>
   </div>
   <div class="form-group">
     <label for="name">Celular</label>
@@ -32,4 +40,5 @@
       required
     />
   </div>
+  <button type="submit" class="btn btn-primary">Salvar</button>
 </form>
