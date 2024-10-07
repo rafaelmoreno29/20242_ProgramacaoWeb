@@ -11,6 +11,7 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
+import { FormTemplateDrivenComponent } from './form-template-driven/form-template-driven.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,7 +30,7 @@ const routes: Routes = [
       { path: 'editar-cliente/:id', component: EditarClienteComponent },
     ],
   },
-
+  { path: 'form-template', component: FormTemplateDrivenComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

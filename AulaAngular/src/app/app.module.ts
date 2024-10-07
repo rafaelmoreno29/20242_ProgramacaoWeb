@@ -16,6 +16,7 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.component';
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
+import { FormTemplateDrivenComponent } from './form-template-driven/form-template-driven.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.
     ListaClienteComponent,
     ListaCompraClienteComponent,
     EditarClienteComponent,
+    FormTemplateDrivenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
