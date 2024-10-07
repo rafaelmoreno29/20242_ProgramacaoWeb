@@ -10,6 +10,7 @@ export class FormTemplateDrivenComponent {
   cliente: any = {};
 
   salvar(form: NgForm) {
+    debugger;
     if (form.valid) {
       console.log(this.cliente);
     }

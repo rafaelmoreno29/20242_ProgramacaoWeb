@@ -8,7 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { FeatureComponent } from './feature/feature.component';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalcularJurosSimplesComponent } from './calcular-juros-simples/calcular-juros-simples.component';
 import { ExemploDiretivaComponent } from './exemplo-diretiva/exemplo-diretiva.component';
 import { TarefaComponent } from './tarefa/tarefa.component';
@@ -17,6 +17,7 @@ import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.com
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
 import { FormTemplateDrivenComponent } from './form-template-driven/form-template-driven.component';
+import { FormReativeComponent } from './form-reative/form-reative.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +34,15 @@ import { FormTemplateDrivenComponent } from './form-template-driven/form-templat
     ListaCompraClienteComponent,
     EditarClienteComponent,
     FormTemplateDrivenComponent,
+    FormReativeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
