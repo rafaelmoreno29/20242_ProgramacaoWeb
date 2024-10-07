@@ -1,1 +1,12 @@
-<p>form-reative works!</p>
+<form [formGroup]="form">
+  <label class="form-label">Nome</label>
+  <input type="text" class="form-control" formControlName="nome" />
+
+  <label class="form-label">Celular</label>
+  <input type="text" class="form-control" formControlName="celular" />
+
+  <label class="form-label">E-mail</label>
+  <input type="email" class="form-control" formControlName="email" />
+
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

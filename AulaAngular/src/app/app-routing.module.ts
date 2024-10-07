@@ -12,6 +12,7 @@ import { ListaClienteComponent } from './cliente/lista-cliente/lista-cliente.com
 import { ListaCompraClienteComponent } from './cliente/lista-compra-cliente/lista-compra-cliente.component';
 import { EditarClienteComponent } from './cliente/editar-cliente/editar-cliente.component';
 import { FormTemplateDrivenComponent } from './form-template-driven/form-template-driven.component';
+import { FormReativeComponent } from './form-reative/form-reative.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -31,6 +32,8 @@ const routes: Routes = [
     ],
   },
   { path: 'form-template', component: FormTemplateDrivenComponent },
+  { path: 'form-reactive', component: FormReativeComponent },
+
   { path: '**', component: NotFoundComponent },
 ];
 
