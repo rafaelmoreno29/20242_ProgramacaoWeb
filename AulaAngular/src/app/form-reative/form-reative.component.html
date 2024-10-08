@@ -1,4 +1,4 @@
-<form [formGroup]="form">
+<form [formGroup]="form" (ngSubmit)="salvar()">
   <label class="form-label">Nome</label>
   <input type="text" class="form-control" formControlName="nome" />
 
@@ -7,6 +7,21 @@
 
   <label class="form-label">E-mail</label>
   <input type="email" class="form-control" formControlName="email" />
+  <div
+    *ngIf="
+      form.get('email')?.invalid &&
+      (form.get('email')?.dirty || form.get('email')?.touched)
+    "
+  >
+    <div *ngIf="form.get('email')?.errors?.['required']">
+      E-mail é obrigatório
+    </div>
+    <div *ngIf="form.get('email')?.errors?.['email']">
+      E-mail não está no formato correto
+    </div>
+  </div>
 
-  <button type="submit" class="btn btn-primary">Salvar</button>
+  <button [disabled]="!form.valid" type="submit" class="btn btn-primary">
+    Salvar
+  </button>
 </form>

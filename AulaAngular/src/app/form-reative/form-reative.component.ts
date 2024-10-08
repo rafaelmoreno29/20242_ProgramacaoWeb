@@ -16,4 +16,7 @@ export class FormReativeComponent {
       celular: new FormControl(''),
     });
   }
+  salvar() {
+    console.log(this.form.value);
+  }
 }
