@@ -2,6 +2,7 @@
   <label class="form-label">Nome</label>
   <input type="text" class="form-control" formControlName="nome" />
   <div
+    class="error"
     *ngIf="
       form.get('nome')?.invalid &&
       (form.get('nome')?.dirty || form.get('nome')?.touched)
@@ -16,6 +17,7 @@
   <label class="form-label">E-mail</label>
   <input type="email" class="form-control" formControlName="email" />
   <div
+    class="error"
     *ngIf="
       form.get('email')?.invalid &&
       (form.get('email')?.dirty || form.get('email')?.touched)
