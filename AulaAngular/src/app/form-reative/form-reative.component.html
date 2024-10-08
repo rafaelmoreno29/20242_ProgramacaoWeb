@@ -1,6 +1,14 @@
 <form [formGroup]="form" (ngSubmit)="salvar()">
   <label class="form-label">Nome</label>
   <input type="text" class="form-control" formControlName="nome" />
+  <div
+    *ngIf="
+      form.get('nome')?.invalid &&
+      (form.get('nome')?.dirty || form.get('nome')?.touched)
+    "
+  >
+    <div *ngIf="form.get('nome')?.errors?.['required']">Nome é obrigatório</div>
+  </div>
 
   <label class="form-label">Celular</label>
   <input type="text" class="form-control" formControlName="celular" />
