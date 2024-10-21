@@ -2,9 +2,17 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
+const produtos = [];
+
 app.get("/produto", (request, response) => {
-    return response.json({ mensagem: "teste" });
+    return response.json(produtos);
 })
+
+app.post("/produto", (request, response) => {
+    const produto = request.body;
+    produtos.push(produto);
+    return response.json(produto);
+});
 
 app.get("/somar/:numero1/:numero2", (request, response) => {
     const numero1 = request.params.numero1;
