@@ -1,6 +1,15 @@
 const express = require('express');
+const mongoose = require('mongoose');
+
 const app = express();
+
+const usuarioRouter = require('./routes/usuario');
+
+
 app.use(express.json());
+
+app.use('/usuarios', usuarioRouter);
+
 
 const produtos = [];
 
@@ -21,4 +30,13 @@ app.get("/somar/:numero1/:numero2", (request, response) => {
     return response.json({ "soma": soma });
 });
 
-app.listen(3001, () => console.log('server running on port 3001')); 
+mongoose.connect('mongodb+srv://rafaelmorenosax:I5tiC30kIYSsuvBR@apitestemongodb.jqi5v1r.mongodb.net/?retryWrites=true&w=majority')
+    .then(() => {
+        app.listen(3000, () => {
+            console.log('Conectado ao mongoDB');
+            console.log('Servidor iniciado na porta 3000');
+        })
+    })
+    .catch((err) => {
+        console.log(err);
+    });
