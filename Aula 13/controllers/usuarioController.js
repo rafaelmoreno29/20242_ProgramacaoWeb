@@ -1,8 +1,13 @@
 const usuarioModel = require('../models/usuario');
 
 // Lógica para obter todos os usuários
-exports.obterTodos = (req, res) => {
-    res.json({ "mensagem": "Obter todos os usuários" });
+exports.obterTodos = async (req, res) => {
+    try {
+        const usuarios = await usuarioModel.find();
+        res.status(200).json(usuarios);
+    } catch (error) {
+        res.status(500).json({ error: error });
+    }
 };
 
 // Lógica para criar um novo usuário
