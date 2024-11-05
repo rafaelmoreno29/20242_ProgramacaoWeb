@@ -7,4 +7,6 @@ router.get('/', alunoController.obterTodos);
 router.get('/:ra', alunoController.obterPorRa);
 router.get('/:ra/disciplinas', alunoController.obterDisciplinasPorRa);
 router.put('/:ra', alunoController.editarAluno);
+router.delete('/:ra', alunoController.excluirAluno);
+
 module.exports = router;

@@ -39,3 +39,12 @@ exports.editarAluno = async (req, res) => {
         res.status(400).json({ error: error });
     }
 };
+
+exports.excluirAluno = async (req, res) => {
+    try {
+        await alunoModel.deleteOne({ ra: req.params.ra });
+        res.status(200).json({ message: 'Aluno excluído com sucesso' });
+    } catch (error) {
+        res.status(400).json({ error: error });
+    }
+};
